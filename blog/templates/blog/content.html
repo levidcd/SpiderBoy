@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ article.caption }}{% endblock %}
+{% block content %}
+    {% include "blog/_article.html" %}
+    {% include "blog/_comments.html" %}
+    <!--上一行为新添加内容-->
+{% endblock %}
+{% block side %}
+    {% include "blog/_side.html" %}
+{% endblock %}

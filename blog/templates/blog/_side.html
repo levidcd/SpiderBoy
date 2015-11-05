@@ -1,0 +1,32 @@
+<div class="sidebar-module sidebar-module-inset">
+        <h4>关于</h4>
+        <p><span style="color:#333333;">本站通过Python语言的Django框架编写的简单博客，目前实现功能为通过后台管理单元添加文章，作者，分类，标签，并展示在前端页面上，部署在SAE上。</span></p>
+      </div>
+      <div class="sidebar-module">
+        <h4>分类</h4>
+        <ol class="list-unstyled">
+            {% if classification %}
+                {% for item in classification %}
+                    <li><a href="/category/{{ item.id }}/">{{ item.name }}</a></li>
+                    <!--上一行已修改-->
+                {% endfor %}
+            {% endif %}
+        </ol>
+      </div>
+      <div class="sidebar-module">
+        <h4>友情链接</h4>
+        <ol class="list-unstyled">
+          <li><a href="http://weibo.com/lyren3k">Weibo</a></li>
+          <li><a href="https://www.djangoproject.com/">Django</a></li>
+			</ol>
+      </div>
+		
+       <div class="sidebar-module">
+        <h4>登录入口</h4>
+        <ol class="list-unstyled">
+          <li><a href="/admin">登录</a></li>
+        </ol>
+      </div>
+		<div class="sidebar-module">
+            <embed src="http://music.163.com/style/swf/widget.swf?sid=123634635&type=0&auto=1&width=310&height=430" width="330" height="450"  allowNetworking="all"></embed>
+		</div>

@@ -1,0 +1,9 @@
+{% if articles.has_previous %}
+        <a class='paginator' title='上一页' href='?page={{ articles.previous_page_number }}'><span>&lt;&lt;</span></a>
+ {% endif %}
+ {% for page in articles.paginator.page_range %}
+         <a class='paginator' href='?page={{ page }}' title='{{ page }}'><span>{{ page }}</span></a>
+ {% endfor %}
+ {% if articles.has_next %}
+     <a class='paginator' title='下一页' href='?page={{ articles.next_page_number }}'><span>&gt;&gt;</span></a>
+ {% endif %}

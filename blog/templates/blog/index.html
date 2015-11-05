@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+    {% if is_category %}
+        “{{ cate.name }}”文章列表
+    {% else %}
+        主页
+    {% endif %}
+{% endblock %}
+{% block content %}
+    {% if is_category %}
+        <p class="alert alert-info">“{{ cate.name }}”目录下共有{{ articles|length }}篇文章</p>
+    {% endif %}
+{% for article in articles %}
+    {% include "blog/_article.html" %}
+{% endfor%}
+    {% include "blog/_paginator.html" %}
+{% endblock %}
+{% block side %}
+    {% include "blog/_side.html" %}
+{% endblock %}
